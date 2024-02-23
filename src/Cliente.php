@@ -110,4 +110,34 @@ class Cliente extends TelcomController{
         }
     }
     
+    public function listar(array $query = []){        
+        try{
+            $response = $this->http->get('clients', [
+                "headers" => [
+                    "Authorization" => $this->getToken(),
+                ],
+                'query' => $query,
+            ]);
+
+            $body = (string)$response->getBody();
+                        
+            return json_decode($body);
+            
+        } catch (ServerException $ex) {
+            
+            throw TelcomException::fromObjectMessage('[ServerException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+                        
+        } catch (ClientException $ex) {
+            
+            throw TelcomException::fromObjectMessage('[ClientException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            
+        } catch (BadResponseException $ex) {
+            
+            throw TelcomException::fromObjectMessage('[BadResponseException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            
+        } catch (Exception $ex) {
+            throw new TelcomException($ex);
+        }
+    }
+    
 }
