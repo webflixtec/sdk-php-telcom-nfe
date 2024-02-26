@@ -5,15 +5,23 @@ ini_set('display_errors', 1);
 
 require __DIR__ . "/../vendor/autoload.php";
 
-$api = new \Telcom\NotaFiscal();
+$apiNotaFiscal = new \Telcom\NotaFiscal();
+$apiToken = new \Telcom\Token();
 
-$token = 'Bearer XXXX';
+$accessData = [
+    'email' => 'dev@telcomnfe.com.br',
+    'password' => '@@Teste123',
+];
 
 try{
-    $apiResponse = $api->setToken($token)->listar([
+    $apiTokenResponse = $apiToken->session($accessData);
+    
+    $token = 'Bearer ' . $apiTokenResponse[0]->token;
+    
+    $apiResponse = $apiNotaFiscal->setToken($token)->listar([
         'page' => 0,
         'rowsPerPage' => 10,
-        'filterStartDate' => '2024-02-01',
+        //'filterStartDate' => '2024-02-01',
     ]);
 
     Telcom\Helper\TelcomHelper::dump($apiResponse);
