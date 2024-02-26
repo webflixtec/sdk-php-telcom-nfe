@@ -66,15 +66,15 @@ class NotaFiscal extends TelcomController{
             
         } catch (ServerException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ServerException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
                         
         } catch (ClientException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ClientException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (BadResponseException $ex) {
             
-            throw TelcomException::fromObjectMessage('[BadResponseException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (Exception $ex) {
             throw new TelcomException($ex);
@@ -96,15 +96,15 @@ class NotaFiscal extends TelcomController{
             
         } catch (ServerException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ServerException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
                         
         } catch (ClientException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ClientException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (BadResponseException $ex) {
             
-            throw TelcomException::fromObjectMessage('[BadResponseException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (Exception $ex) {
             throw new TelcomException($ex);
@@ -128,15 +128,15 @@ class NotaFiscal extends TelcomController{
             
         } catch (ServerException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ServerException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
                         
         } catch (ClientException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ClientException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (BadResponseException $ex) {
             
-            throw TelcomException::fromObjectMessage('[BadResponseException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (Exception $ex) {
             throw new TelcomException($ex);
@@ -158,15 +158,15 @@ class NotaFiscal extends TelcomController{
             
         } catch (ServerException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ServerException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
                         
         } catch (ClientException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ClientException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (BadResponseException $ex) {
             
-            throw TelcomException::fromObjectMessage('[BadResponseException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (Exception $ex) {
             throw new TelcomException($ex);
@@ -187,15 +187,15 @@ class NotaFiscal extends TelcomController{
             
         } catch (ServerException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ServerException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
                         
         } catch (ClientException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ClientException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (BadResponseException $ex) {
             
-            throw TelcomException::fromObjectMessage('[BadResponseException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (Exception $ex) {
             throw new TelcomException($ex);
@@ -216,15 +216,15 @@ class NotaFiscal extends TelcomController{
             
         } catch (ServerException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ServerException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
                         
         } catch (ClientException $ex) {
             
-            throw TelcomException::fromObjectMessage('[ClientException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (BadResponseException $ex) {
             
-            throw TelcomException::fromObjectMessage('[BadResponseException] ' . $ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+            throw TelcomException::fromGuzzleException($ex);
             
         } catch (Exception $ex) {
             throw new TelcomException($ex);
