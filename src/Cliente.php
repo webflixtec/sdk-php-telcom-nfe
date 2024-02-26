@@ -21,7 +21,7 @@ use Telcom\Exceptions\TelcomException;
  */
 class Cliente extends TelcomController{
     
-    public function cadastrar(array $body){        
+    public function cadastrar(array $data){        
         try{
             $response = $this->http->post('clients', [
                 "headers" => [
@@ -51,7 +51,7 @@ class Cliente extends TelcomController{
         }
     }
     
-    public function atualizar($id, array $body){        
+    public function atualizar($id, array $data){        
         try{
             $response = $this->http->put('clients/'.$id, [
                 "headers" => [

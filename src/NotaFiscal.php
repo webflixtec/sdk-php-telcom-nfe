@@ -21,7 +21,7 @@ use Telcom\Exceptions\TelcomException;
  */
 class NotaFiscal extends TelcomController{
     
-    public function emitir(array $body){        
+    public function emitir(array $data){        
         try{
             $response = $this->http->post('taxReceipts', [
                 "headers" => [
@@ -51,7 +51,7 @@ class NotaFiscal extends TelcomController{
         }
     }
     
-    public function emitirFull(array $body){        
+    public function emitirFull(array $data){        
         try{
             $response = $this->http->post('taxReceipts/create', [
                 "headers" => [
@@ -81,7 +81,7 @@ class NotaFiscal extends TelcomController{
         }
     }
  
-    public function editar($id, array $body){        
+    public function editar($id, array $data){        
         try{
             $response = $this->http->put('taxReceipts/' . $id, [
                 "headers" => [
