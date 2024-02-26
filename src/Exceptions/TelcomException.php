@@ -3,6 +3,9 @@
 namespace Telcom\Exceptions;
 
 use Exception;
+use GuzzleHttp\Exception\BadResponseException;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\ServerException;
 
 class TelcomException extends Exception{
     
@@ -30,6 +33,11 @@ class TelcomException extends Exception{
             
         }
         
+    }
+    
+    public static function fromGuzzleException(ServerException|ClientException|BadResponseException $ex){
+        $responseBody = '['.$ex::class.'] Body: ' . (string)$ex->getResponse()->getBody();
+        return new TelcomException( new Exception($responseBody, $ex->getCode(), $ex->getPrevious()) );
     }
     
 }
